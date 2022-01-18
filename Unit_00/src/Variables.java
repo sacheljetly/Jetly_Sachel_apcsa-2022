@@ -41,16 +41,24 @@ public class Variables
 		System.out.println("/////////////////////////////////");
 		System.out.println("*                               *");
 		System.out.println("*        integer types          *");
-		System.out.println( "byte: " + byteOne );
-		System.out.println("int: " + intTwo);
-		System.out.println("short: " + shortSix);
-		System.out.println("long: " + longTen );
-		System.out.println( "float: " +floatThree);
-		System.out.println( "character: " +charSeven );
-		System.out.println( "boolean: " +boolEight);
-		System.out.println( "string: " +stringNine);
-		System.out.println( "double: " +doubleFive );
 		System.out.println("*8 bit - byteOne = "+byteOne+"\t\t*");
+		System.out.println("*32 bit - intTwo = "+intTwo+"\t\t*");
+		System.out.println("*16 bit - shortSix = "+shortSix+"\t\t*");
+		System.out.println("*64 bit - longTen = "+longTen+"\t\t*");
+		System.out.println(" ");
+		System.out.println(" ");
+		System.out.println("*        other integer types          *");
+		System.out.println("*16 bit - charSeven = "+charSeven+"\t\t*");
+		System.out.println("*32 bit - floatThree = "+floatThree+"\t\t*");
+		System.out.println("*64 bit - doubleFive = "+doubleFive+"\t\t*");
+		System.out.println(" ");
+		System.out.println(" ");
+		System.out.println("*        other types          *");
+		System.out.println("stringNine = "+stringNine+"\t\t*");
+		System.out.println("*1 bit - boolEight = "+boolEight+"\t\t*");
+		
+	
+		
 
 
 

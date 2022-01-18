@@ -60,7 +60,7 @@ public class StarsAndStripes
    out.println("|                        |\n|                        |\n|                        |\n|                        |\n|                        |\n|                        |\n|                        |\n|                        |");
    out.println("--------------------------");
    }   
-   
+   //for fun :)
    public void printFlagPTone ()
    {
 	   out.println("\u001B[34m|********\u001B[31m --------------------------|");
