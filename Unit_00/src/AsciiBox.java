@@ -12,6 +12,12 @@ public class AsciiBox
 	{
 		System.out.println("Sachel Jetly \t  01/14/22 \n\n" );
 		System.out.println("+++++++++++++++++++++++++ " );
+		System.out.println("|                       |");
+		System.out.println("|                       |");
+		System.out.println("|                       |");
+		System.out.println("|                       |");
+		System.out.println("|                       |");
+		System.out.println("+++++++++++++++++++++++++ " );
 
 	}
 }

@@ -41,15 +41,15 @@ public class Variables
 		System.out.println("/////////////////////////////////");
 		System.out.println("*                               *");
 		System.out.println("*        integer types          *");
-		System.out.print( byteOne + ",");
-		System.out.print( intTwo + ",");
-		System.out.print( shortSix + ",");
-		System.out.print( longTen + ",");
-		System.out.print( floatThree + ",");
-		System.out.print( charSeven + ",");
-		System.out.print( boolEight + ",");
-		System.out.print( stringNine + ",");
-		System.out.println( doubleFive + ",");
+		System.out.println( "byte: " + byteOne );
+		System.out.println("int: " + intTwo);
+		System.out.println("short: " + shortSix);
+		System.out.println("long: " + longTen );
+		System.out.println( "float: " +floatThree);
+		System.out.println( "character: " +charSeven );
+		System.out.println( "boolean: " +boolEight);
+		System.out.println( "string: " +stringNine);
+		System.out.println( "double: " +doubleFive );
 		System.out.println("*8 bit - byteOne = "+byteOne+"\t\t*");
 
 
