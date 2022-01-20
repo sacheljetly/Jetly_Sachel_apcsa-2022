@@ -29,7 +29,7 @@ public class StarsRunner
       flag.printTwoBlankLines();
       flag.printABigBox();
       
-      
+     //for fun
       for (int i=0; i <4;i++) {
     	  flag.printFlagPTone();
       }

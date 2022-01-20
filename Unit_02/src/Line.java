@@ -3,10 +3,11 @@
 //Name -
 //Date -
 
-public class Fahrenheit
+public class Line
 {
-	public static double convert( double f )
+	public static double getSlope( int x1, int y1, int x2, int y2 )
 	{
 		return 0;
 	}
+
 }
