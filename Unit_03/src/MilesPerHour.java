@@ -54,13 +54,10 @@ public class MilesPerHour
 	    }
 		else
 		{
-			
+	
 			mph = (distance/time);  
-			
-			
+				
 		}
-		
-
 		
 	}
 	
