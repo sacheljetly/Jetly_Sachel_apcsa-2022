@@ -7,6 +7,8 @@ public class AvgLen
 {
    public static double go( String a, String b )
 	{
-		return 0;
+		double totalLength = (a.length() + b.length());
+		double avg = (totalLength/ 2);
+		return avg; 
 	}
 }
