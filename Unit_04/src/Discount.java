@@ -15,8 +15,36 @@ public class Discount
 	
 	//getDiscountedBill() will return final amount of the bill
 	//			if the bill is >2000, the bill receives a 15% discount
+	
+	
+	public Discount(double amt) {
+		
+		
+	}
+
+
+		
+	
 	public static double getDiscountedBill(double bill)
 	{
-		return 0;
+		
+		if (bill> 2000)
+		{
+			bill = (bill* (0.85));
+		}
+		else
+		{
+			bill = (bill* (1.00));
+		}
+		return bill;
+		
+	
+		
+		
+		
 	}
+	
+	
+	
+		
 }
