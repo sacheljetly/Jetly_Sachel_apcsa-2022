@@ -22,7 +22,7 @@ public class DistanceRunner
 		int x2;
 		int y2;
 		
-			
+	
 	//User input for values	
 		Scanner keyboard = new Scanner(System.in);
 		out.print("Input a value for x1 :: ");
@@ -38,6 +38,7 @@ public class DistanceRunner
 		
 		cat.calcDistance();
 		out.print("Distance :: ");
+		
 	System.out.printf("%.3f\n", cat.getDistance());	
 	
 	}
