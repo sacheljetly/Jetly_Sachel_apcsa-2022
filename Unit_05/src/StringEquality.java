@@ -31,11 +31,12 @@ public class StringEquality
 
 	public boolean checkEquality( )
 	{
-		if ((wordOne.equals(wordTwo)== true) && (wordOne.compareTo(wordTwo) ==0))
+		if (wordOne.equals(wordTwo)== true)
 		{
 			return true; 
 		}
 		return false;
+		
 	}
 
 	public String toString()
