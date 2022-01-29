@@ -18,16 +18,26 @@ public class WordsCompare
 	}
 
 	public WordsCompare(String one, String two)
-	{
+	{ one=null;
+	two=null;
 	}
 
 	public void setWords(String one, String two)
 	{
-
+		wordOne= one;
+		wordTwo= two;
 	}
 
 	public void compare()
 	{
+		if (wordOne.compareTo(wordTwo)<1)
+			compare = -1; 
+		else if (wordOne.compareTo(wordTwo)>1)
+		{
+			compare = 1;
+		}
+		else 
+			compare=0; 
 	}
 
 	public String toString()
