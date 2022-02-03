@@ -9,14 +9,40 @@ public class Perfect
    private int number;
 
 	//add constructors
+   public Perfect()
+   {
+	   
+   }
+   
+   public Perfect(int num)
+   {
+	   setNum(number);
+   }
 
-	//add a set method
-
-	public boolean isPerfect()
+	public void setNum(int num)
 	{
-		return false;
+		number = num;
 	}
 
-	//add a toString	
+	public boolean isPerfect(int number)
+	{
+		
+		int divisorSum=0; 
+		
+		for (int i=1; i<= number/2; i++)
+		{
+				{
+					if (number %i ==0)
+						divisorSum += i; 
+				}
+		
+		}
+		
+		if (divisorSum == number)
+			return true;
+		return false; 
+	}
+	
+
 	
 }
