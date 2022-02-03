@@ -11,12 +11,14 @@ public class LetterRemover
 
 	public LetterRemover()
 	{
-		setRemover(sentence, lookFor); 
+		setRemover(sentence, lookFor);
 	}
+
 
 	public LetterRemover(String s, char rem)
 	{
-		
+		sentence= s; 
+		lookFor = rem;
 	}
 	
 	
@@ -29,20 +31,26 @@ public class LetterRemover
 
 	public String removeLetters()
 	{
-		for (int i =0; i< sentence.length(); i++)
+		String cleaned = sentence; 
+		int locate = cleaned.indexOf(lookFor);
+		while (locate >=0)
 		{
-		while (sentence.charAt(i) == lookFor)
-			i++; 
+			cleaned = cleaned.substring(0, locate) + cleaned.substring(locate+1);
+			locate = cleaned.indexOf(lookFor);
 		}
 		
-		String cleaned=sentence;
 		return cleaned;
 		
-		
 	}
+		
+		
+		
+		
+		
+	
 
 	public String toString()
 	{
-		return sentence + " - letter to remove " + lookFor;
+		return sentence + " - letter to remove " + lookFor + ":  "+ removeLetters();
 	}
 }
