@@ -11,21 +11,18 @@ public class RPSRunner
 	{
 		Scanner keyboard = new Scanner(System.in);
 		String response;
-		
+		char input = 'Y'; 
 		
 		
 			
 	
 			do
 		{ 
-				out.print("\nDo you want to play (yes/no) :: ");
-				String input=	keyboard.next();
-				if (input.equals("no"))
-					break; 
+				
 				
 				String player = "";
 				
-				out.print("Rock-Paper-Scissors - pick your weapon [R,P,S] :: ");
+				out.println("\nRock-Paper-Scissors - pick your weapon [R,P,S] :: ");
 				player = keyboard.next();
 				response = player; 
 			
@@ -38,10 +35,13 @@ public class RPSRunner
 				game.determineWinner();
 				out.print(game);
 			
-				
+				out.print("\nDo you want to play (Y/N) :: ");
+				 input=	keyboard.next().charAt(0);
+	
+					
 			
 		}
-			while (response.equals("yes"));
+			while (input == 'Y');
 		
 	}
 }

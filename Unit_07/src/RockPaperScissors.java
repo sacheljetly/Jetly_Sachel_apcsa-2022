@@ -61,20 +61,40 @@ public class RockPaperScissors
 	public String determineWinner()
 	{
 		String winner="";
-		if (playerValue>num)
-			winner = ("!Player wins");
-		if (num>playerValue)
+		
+		
+		if (playerValue == num)
+			winner = ("\n!Draw game!");
+		
+		if (playerValue ==0)
 		{
-			winner = ("!Computer wins");
+			if (num ==1)
+				winner = ("!Computer wins <<Paper covers Rock>>!");
+			else if (num==2)
+				winner = ("!Player wins <<Rock crushed Scissors>>!");
 		}
-		else if (num == playerValue)
-		winner = ("\n!Draw game!");
+		
+		if (playerValue ==1)
+		{
+			if (num ==0)
+				winner = ("!Player wins <<Paper covers Rock>>!");
+			else if (num==2)
+				winner = ("!Computer wins <<Scissors cut Paper>>!");
+		}
+	
+		if (playerValue ==2)
+		{
+			if (num ==0)
+				winner = ("!Computer wins <<Rock crushes Scissors>>!");
+			else if (num==1)
+				winner = ("!Player wins <<Scissors cut Paper>>!");
+		}
 		return winner; 
 	}
 
 	public String toString()
 	{
-		String output="\n player had " + playChoice + " \n computer had " + compChoice +"\n" +determineWinner();
+		String output="\nPlayer had " + playChoice + " \nComputer had " + compChoice +"\n" +determineWinner();
 		return output;
 	}
 }
