@@ -30,32 +30,52 @@ int a, b, c = 0;
 	{
 		return Math.pow(a, 2) + Math.pow(b, 2) == Math.pow(c, 2);
 	}
-	public int greatestCommonFactor(int num)
+	
+	public int greatestCommonFactor(int a,int b, int c)
 	{
-	for (int a= 1; a<number -1; a++)
+		
+		
+		int lowest = Math.min(Math.min(a, b),c);
+
+        for (int i = lowest; i > 0; i--) {
+            if ((a % i == 0) && (b % i == 0)) {
+                for (int j = i; j > 0; j--) {
+                    if ((i % j == 0) && (c % j == 0)) {
+                        return j;
+                    }
+                }
+            }
+        }
+
+        return -1;
+    }
+
+	public boolean  isOdd(int a,int b, int c)
 	{
-		for (int b=a; b<number; b++)
+		if ((a%2 == 0 && b%2==1) || (a%2==1 && b%2==0))
 		{
-			int c= (int) Math.sqrt(a*a+b*b);
-			if (c%1 ==0 )
-			{
-				out.println(a);
-				out.println(b);
-				out.println(c);
-			}
+			return true; 
 		}
-	}
-	return 0 ;
+		return false; 
 	}
 	
+	
 
-	public String toString(int a, int b, int c)
-	{String output="";
-		
+	public String toString()
+	{
+		int max = number;
+        String output = "";
 
+        for (int a = 1; a <= max; a++) {
+            for (int b = a + 1; b <= max; b++) {
+                for (int c = b + 1; c <= max; c++) {
+                    if (Triple(a,b,c) && isOdd(a,b,c) && (greatestCommonFactor(a, b, c) == 1)) {
+                        output = "" + a + " " + b + " " + c + "\n";
+                    }
+                }
+            }
+        }
 
-
-
-		return output+greatestCommonFactor(a)+"\n";
+        return output;
 	}
 }

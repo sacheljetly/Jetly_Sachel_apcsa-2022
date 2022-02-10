@@ -10,7 +10,7 @@ public class TriplesRunner
    {
 	   
 	   Triples test = new Triples(); 
-	   test.greatestCommonFactor(12);
+	   test.setNum(110);
 	   
 	   out.print(test);
 	   
