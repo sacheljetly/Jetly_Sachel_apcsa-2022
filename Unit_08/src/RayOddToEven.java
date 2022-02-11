@@ -14,9 +14,7 @@ public class RayOddToEven
 
 	public static int go(int[] ray)
 	{
-	    int firstOdd=0; 
-		int firstEven = 0; 
-		int count =0; 
+	  
 		
 		for (int i = 0; i< ray.length; i++)
 		{
@@ -28,32 +26,19 @@ public class RayOddToEven
 						{
 							return d-i; 
 						}
-					//firstOdd = i; 
-				}
-			break; 
+					
+					}
+				break; 
 			
-		/*	for (int d = i; d<ray.length; d++)
-			{
-				if (ray[d]%2==0)
-				{
-					firstEven = d;
-				break;
 				}
-				else
-					count = 0; 
-			}
-			count = firstEven-firstOdd; 
-			break; 
-				
 		}
-		if (count ==0)
-		{ 
-			count = -1; 
-	*/	
-				}}
-return -1; 
+
+		return -1; 
 		
 		
 	
 					
-}}
+	}
+	
+
+}
