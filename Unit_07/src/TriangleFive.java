@@ -37,7 +37,7 @@ public class TriangleFive
 	int count = 0;
 	
 	do{
-	for (int i = 1; i <= amount-count; i++) {
+	for (int i = 1; i <= amount-count; i++) 	{
 			output += "\n";
 		
 		for (int b = 1; b <= amount-count; b++){ 
