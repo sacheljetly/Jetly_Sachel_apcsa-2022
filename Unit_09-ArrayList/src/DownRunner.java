@@ -19,7 +19,7 @@ public class DownRunner
 		
 		System.out.println(test.go(Arrays.asList(32767)));
 		
-		System.out.println(test.go(Arrays.asList(255,252222)));
+		System.out.println(test.go(Arrays.asList(255,255)));
 		
 		
 		System.out.println(test.go(Arrays.asList(9,10,-88,100,-555,1000)));
