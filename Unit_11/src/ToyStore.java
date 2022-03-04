@@ -21,27 +21,36 @@ public class ToyStore
 
 	public void loadToys( String toys )
 	{
-		toyList = new ArrayList<Toy>(); 
-		ArrayList<String> toyss = new ArrayList<>(Arrays.asList((( toys.split(",")))));
-	if (toyss.size()>1) {
-		for (int i=0; i<toyss.size(); i+=2) {
-		 String name = toyss.get(i);
-		String toytype = toyss.get(i+1);
-		Toy f = getThatToy(name);
 		
-		if (toyList.get(i).getName()==null)
+		String toy1[] = toys.split("");
+		
+	
+		
+		
+		for (int i=0; i<toy1.length; i++) {
+		
+		
+		int j; 
+		for ( j=0; j<toyList.size(); j++)
 		{
-		toyList.get(i).setCount(toyList.get(i).getCount()+1);
+			if (toyList.get(j).getName().equals(toy1[i]))
+			{
+				toyList.get(j).setCount(toyList.get(j).getCount()+1);
+				break;
+			}
 		}
-		else
+		
+		if (j==toyList.size())
 		{
-			String namef = toyss.get(i);
-			String type = toyss.get(i+1); 
-			Toy t = getThatToy(name);
+			Toy toy2 = new Toy(); 
+			toy2.setName(toy1[i]);
+			toy2.setCount(1);
+			toyList.add(toy2);
 		}
-		}}
+		}
 		
 	}
+	
   
   	public Toy getThatToy( String nm )
   	{
@@ -64,6 +73,13 @@ public class ToyStore
   	  
 	public String toString()
 	{
-	   return toyList.toString();
+		 String result = "";
+		for (int i=0; i<toyList.size()-1; i++)
+		   {
+			   result += toyList.get(i).getName() + toyList.get(toyList.size()-1).getCount();
+			   
+		   }
+		 
+		return result;
 	}
 }
