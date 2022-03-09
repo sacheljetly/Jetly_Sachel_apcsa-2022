@@ -28,8 +28,8 @@ public class MonsterRunner
 		
 		Skeleton s2= new Skeleton(n,p);
 		
-		System.out.println("Monster 1 - " + s.getName() +" -- "+ s.getHowBig());
-		System.out.println("Monster 2 - " + s2.getName()+ " -- "+ s2.getHowBig());
+		System.out.println("Monster 1 - " + s.getName() +" --> "+ s.getHowBig());
+		System.out.println("Monster 2 - " + s2.getName()+ " --> "+ s2.getHowBig());
 		
 		
 		if (s.isBigger(s2))
