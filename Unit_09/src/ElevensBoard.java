@@ -94,14 +94,13 @@ public class ElevensBoard extends Board {
 	 *              contain an 11-pair; false otherwise.
 	 */
 	private boolean containsPairSum11(List<Integer> selectedCards) {
-		if (selectedCards.size()<2)
-			return false;
-		
-		for (int i=0;i<selectedCards.size()-1;i++)
+		for( int i =0; i<selectedCards.size(); i++)
 		{
-			for (int j=i+1; j<selectedCards.size(); j++)
+			int num = selectedCards.get(i).intValue();
+			for (int j = i+1; j<selectedCards.size();j++)
 			{
-				if (cardAt(selectedCards.get(i).pointValue() + cardAt(selectedCards.get(j).pointValue()==11)))
+				int num2= selectedCards.get(j).intValue();
+				if (cardAt(num).pointValue() + cardAt(num2).pointValue()==11)
 				{
 					return true;
 				}
@@ -123,28 +122,23 @@ public class ElevensBoard extends Board {
 		boolean yesQ = false;
 		boolean yesK=false;
 		
-		if (selectedCards.size()<3)
+		for (Integer f : selectedCards)
 		{
-			return false;
-		}
-		
-		for (int i=0;i<selectedCards.size(); i++)
-		{
-			if (cardAt(selectedCards.get(i).rank() =="jack")
-					{
-				yesJ = true;
-					}
-			else if (cardAt(selectedCards.get(i).rank() =="queen"))
+			int i = f.intValue();
+			if (cardAt(i).rank().equals("jack"))
 			{
-				yesQ=true;
+				yesJ= true;
 			}
 			
-			else if (cardAt(selectedCards.get(i).rank() =="king")
-					{
-				yesK = true;
-					}
+			else if (cardAt(i).rank().equals("queen"))
+			{
+				yesQ= true;
+			}
+			
+			else if (cardAt(i).rank().equals("king"))
+			{
+				yesK= true;
+			}
 		}
-		
-		return (yesJ && yesQ && yesK);
-	}
-}
+		return yesJ && yesQ && yesK; 
+}}

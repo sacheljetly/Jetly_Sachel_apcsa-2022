@@ -34,13 +34,12 @@ public class Deck {
 	   
 		for (int i =0; i<ranks.length; i++)
 		{
-			for (String suitString : suits) {
-				cards.add(new Card(ranks[i], suitString, values[i]));
-			}
+			Card funCard = new Card(ranks[i], suits[i], values[i]);
+		   
 
-			
+			this.cards.add(funCard); 
 		}
-		size = cards.size();
+		
 		shuffle(); 
 		
 	}
