@@ -20,42 +20,26 @@ public class RecursionFunThree
 	 */
 	public static int luckyThrees( long number )
 	{
-		int sum =0;
-		int len = 0; 
-		long num = number; 
+		int count =0;
+		long dig = 0; 
 		
-		while (number >0)
+		
+		if (number <10)
 		{
-			len++;
-			number/= 10; 
+			return count; 
 			
 		}
-		
-		number = num; 
-		long[] numz = new long[len];
-		for (int i = 0; num != 0; i++)
-		{
-			numz[i] = number %10; 
-			number /=10; 
-		}
-		
-		for (int j = 0; j<numz.length-1; j++)
-		{
-			if (numz[j] ==3)
+		else {
+			
+			dig = number%10; 
+			if (dig ==3)
 			{
-				if (numz[j+1] ==3)
-				{
-					sum +=1; 
-					j++;
-				}
-				else
-				{
-					sum++; 
-				}
+				count ++; 
+				luckyThrees(number/10);
 			}
+			return count;
 		}
-	return sum; 
 		
-	}
 		
-	}
+		
+	}}

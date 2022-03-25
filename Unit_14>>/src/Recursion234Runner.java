@@ -16,7 +16,7 @@ public class Recursion234Runner
 
 		//add more test cases
 		
-		
+		System.out.println("Second Lab");
 		System.out.println(RecursionFunThree.luckyThrees(3));
 		System.out.println(RecursionFunThree.luckyThrees(31332));
 		System.out.println(RecursionFunThree.luckyThrees(134523));
