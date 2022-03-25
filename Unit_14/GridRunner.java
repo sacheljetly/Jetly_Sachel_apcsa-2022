@@ -11,5 +11,11 @@ public class GridRunner
 {
 	public static void main( String args[] ) throws IOException
 	{
+		
+		String [] vals = { "a" , "b" , "c" , "7", "9", "x", "2"}; 
+		Grid test = new Grid(20, 20, vals); 
+		out.println(test);
+		}
 	}
 }
+
