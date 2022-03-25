@@ -3,9 +3,6 @@
 //Name -
 
 import java.util.*;
-
-import static java.lang.System.out;
-
 import java.io.*; 
 
 public class MatrixCount1
@@ -22,7 +19,3 @@ public class MatrixCount1
 		return 0;
     }
 }
-
-
-
-
