@@ -1,4 +1,4 @@
-//© A+ Computer Science  -  www.apluscompsci.com
+//ï¿½ A+ Computer Science  -  www.apluscompsci.com
 //Name - 
 //Date -
 //Class -
@@ -20,6 +20,42 @@ public class RecursionFunThree
 	 */
 	public static int luckyThrees( long number )
 	{
-		return 0;
+		int sum =0;
+		int len = 0; 
+		long num = number; 
+		
+		while (number >0)
+		{
+			len++;
+			number/= 10; 
+			
+		}
+		
+		number = num; 
+		long[] numz = new long[len];
+		for (int i = 0; num != 0; i++)
+		{
+			numz[i] = number %10; 
+			number /=10; 
+		}
+		
+		for (int j = 0; j<numz.length-1; j++)
+		{
+			if (numz[j] ==3)
+			{
+				if (numz[j+1] ==3)
+				{
+					sum +=1; 
+					j++;
+				}
+				else
+				{
+					sum++; 
+				}
+			}
+		}
+	return sum; 
+		
 	}
-}
+		
+	}
