@@ -15,12 +15,26 @@ public class NumberSorter
 	private static int getNumDigits(int number)
 	{
 		int count = 0;
+		for (int i = 0; i<number; count++)
+		{
+			number/=10;
+		}
+			
 		return count;
 	}
 
 	public static int[] getSortedDigitArray(int number)
 	{
-		int[] sorted = null;
+		int[] sorted = new int [NumberSorter.getNumDigits(number)];
+		for (int i =0; i<sorted.length; i++)
+		{
+			sorted[i] = number%10;
+			if ( number >0)
+			{
+				number/=10;
+			}
+		}
+		Arrays.sort(sorted);
 		return sorted;
 	}
 }
