@@ -17,7 +17,11 @@ public class Paddle extends Block
    }
 
 
-   //add the other Paddle constructors
+   public Paddle(int x, int y)
+   {
+	   super(x,y);
+	   speed= 5; 
+   }
 
 
 
