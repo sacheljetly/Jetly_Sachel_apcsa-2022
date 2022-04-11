@@ -25,12 +25,26 @@ public class Block implements Locatable
 
 	}
 	
+	public Block (int x, int y, Color coll)
+	{
+		xPos = x;
+		yPos= y; 
+		color = color.black; 
+	}
 	public Block (int x, int y, int w, int h)
 	{
 		xPos= x;
 		yPos =y;
 		width =w;
 		height=h;
+		color = color.BLACK;
+		
+	}
+	public Block (int x, int y, int w, Color coll)
+	{
+		xPos= x;
+		yPos =y;
+		width =w;
 		color = color.BLACK;
 		
 	}
@@ -140,5 +154,10 @@ draw(window);
 	public String toString()
 	{
 		return xPos + " " + yPos + " " + width + "  " + color; 
+	}
+
+	public Color getColor() {
+		
+		return color;
 	}
 }
