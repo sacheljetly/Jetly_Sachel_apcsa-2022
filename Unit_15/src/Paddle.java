@@ -64,21 +64,21 @@ public int getSpeed()
 
    public void moveUpAndDraw(Graphics window)
    {
-	   draw(window, Color.white);
+	   draw(window, Color.black);
 	   
 	   setY(getY()-speed);
 	   
-	   draw(window, Color.black);
+	   draw(window, Color.white);
 
    }
 
    public void moveDownAndDraw(Graphics window)
    {
-	   draw(window, Color.white)
+	   draw(window, Color.black)
 ;
 	   setY(getY()+speed);
 	   
-	   draw (window, Color.black); 
+	   draw (window, Color.white); 
 
    }
 

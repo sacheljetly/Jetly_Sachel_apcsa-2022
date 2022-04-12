@@ -20,7 +20,7 @@ public class Block implements Locatable
 		yPos = 150; 
 		width = 10;
 		height= 10;
-		color = Color.white;
+		color = Color.black;
 
 
 	}
@@ -29,7 +29,7 @@ public class Block implements Locatable
 	{
 		xPos = x;
 		yPos= y; 
-		color = color.white; 
+		color = color.black; 
 	}
 	public Block (int x, int y, int w, int h)
 	{
@@ -37,7 +37,7 @@ public class Block implements Locatable
 		yPos =y;
 		width =w;
 		height=h;
-		color = color.white;
+		color = color.black;
 		
 	}
 	public Block (int x, int y, int w, Color coll)
@@ -45,7 +45,7 @@ public class Block implements Locatable
 		xPos= x;
 		yPos =y;
 		width =w;
-		color = color.white;
+		color = color.black;
 		
 	}
 	
@@ -69,7 +69,7 @@ public class Block implements Locatable
 		this.xPos=x;
 		this.yPos=y;
 		width = 10;
-		color = Color.white;
+		color = Color.black;
 		
 	}
 	
