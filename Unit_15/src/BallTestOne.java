@@ -18,7 +18,7 @@ class BallTestOne
 		Ball three = new Ball(100,100,30,50);
 		out.println(three);
 		
-		//Ball four = new Ball(100,100,30,50,Color.BLUE, 5, 6);
+		Ball four = new Ball(100,100,30,50,Color.BLUE);
 		//out.println(four);
 		
 		Ball five = new Ball(100,100,30,50,Color.BLUE,5,6);
@@ -28,7 +28,7 @@ class BallTestOne
 		Ball six = new Ball(100,100,30,50,Color.blue,5,6);
 		out.println(six);		
 		
-		//out.println(five.equals(four));		
+		out.println(five.equals(four));		
 		
 		out.println(five.equals(five));										
 	}

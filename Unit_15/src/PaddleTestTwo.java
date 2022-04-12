@@ -27,10 +27,10 @@ ball = new Ball();
 		//instantiate a Ball
 		
 		
-		leftPaddle = new Paddle(20,200,5);
+		leftPaddle = new Paddle(20,300,5);
 		//instantiate a left Paddle
 		
-		keys  = new boolean [5];
+		keys  = new boolean[5];
 		
 		
 		//instantiate a right Paddle
@@ -42,7 +42,7 @@ ball = new Ball();
 
 
 		//set up the Canvas
-		setBackground(Color.WHITE);
+		setBackground(Color.black);
 		setVisible(true);
 
 		this.addKeyListener(this);
@@ -78,7 +78,7 @@ ball = new Ball();
 		{
 			//move left paddle down and draw it on the window
 
-
+			leftPaddle.moveDownAndDraw(window);
 		}
 		if(keys[2] == true)
 		{

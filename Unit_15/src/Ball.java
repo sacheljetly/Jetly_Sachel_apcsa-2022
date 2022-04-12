@@ -13,17 +13,23 @@ public class Ball extends Block
 	public Ball()
 	{
 		super(200,200);
-		xSpeed = 3;
-		ySpeed = 1;
+		xSpeed = 2;
+		ySpeed = 2;
 	}
 
 	//add the other Ball constructors
 	
-	
+	public Ball( int x, int y, int width , int height, Color col)
+	{
+		super(x,y,width,height,col);
+		xSpeed = 3; 
+		ySpeed= 4; 
+		
+	}
 	public Ball(int x, int y)
 	{
 		super(x,y);
-		xSpeed = 3;
+		xSpeed = 2;
 		ySpeed= 2;
 		
 		
@@ -35,14 +41,14 @@ public class Ball extends Block
 		super (200,200,col);
 		
 		xSpeed = 4; 
-		ySpeed =3;
+		ySpeed =2;
 	}
 	
 	public Ball ( int x,  int y , int width, int height)
 	{
 		super(x,y,width,height);
-		xSpeed = (int) Math.random() *12-6; 
-		ySpeed = (int) Math.random() *12-6; 
+		xSpeed = 2; 
+		ySpeed = 2; 
 		
 		
 	}
@@ -127,5 +133,8 @@ else
 
 	public int getXSpeed() {
 		return xSpeed;
+	}
+	public int getYSpeed() {
+		return ySpeed;
 	}
 }
