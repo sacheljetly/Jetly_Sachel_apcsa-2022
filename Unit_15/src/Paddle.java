@@ -13,7 +13,7 @@ public class Paddle extends Block
    public Paddle()
    {
 		super(10,100);
-      speed =5;
+      speed =2;
    }
 
 
@@ -86,4 +86,9 @@ public int getSpeed()
    
    
    //add a toString() method
+   
+   public String toString()
+   {
+	   return ""; 
+   }
 }

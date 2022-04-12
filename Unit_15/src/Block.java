@@ -20,7 +20,7 @@ public class Block implements Locatable
 		yPos = 150; 
 		width = 10;
 		height= 10;
-		color = Color.BLACK;
+		color = Color.white;
 
 
 	}
@@ -29,7 +29,7 @@ public class Block implements Locatable
 	{
 		xPos = x;
 		yPos= y; 
-		color = color.black; 
+		color = color.white; 
 	}
 	public Block (int x, int y, int w, int h)
 	{
@@ -37,7 +37,7 @@ public class Block implements Locatable
 		yPos =y;
 		width =w;
 		height=h;
-		color = color.BLACK;
+		color = color.white;
 		
 	}
 	public Block (int x, int y, int w, Color coll)
@@ -45,7 +45,7 @@ public class Block implements Locatable
 		xPos= x;
 		yPos =y;
 		width =w;
-		color = color.BLACK;
+		color = color.white;
 		
 	}
 	
@@ -69,7 +69,7 @@ public class Block implements Locatable
 		this.xPos=x;
 		this.yPos=y;
 		width = 10;
-		color = Color.BLACK;
+		color = Color.white;
 		
 	}
 	
@@ -114,11 +114,40 @@ draw(window);
    
 	public boolean equals(Object obj)
 	{
+		
+		Block b = (Block) obj; 
+		
+		if ( b.getX() != xPos)
+		{
+			return false;
+		}
+		
+		else if (b.getY() != yPos)
+		{
+			return false; 
+		}
+		
+		else if (b.getWidth() != width)
+		{
+			return false; 
+		}
+		
+		else if (b.getHeight() != height)
+		{
+			return false; 
+		}
+		
+		else if (b.getColor() != color)
+		{
+			 return false;
+		}
+		
+		else 
+			return true; 
 
 
 
-
-		return this==obj;
+		
 	}   
 	
 	public void setPos(int x, int y)
