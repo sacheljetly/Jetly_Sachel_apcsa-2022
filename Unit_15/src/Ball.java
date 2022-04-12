@@ -9,8 +9,13 @@ public class Ball extends Block
 {
 	private int xSpeed;
 	private int ySpeed;
+	
+	Ball()
+	{
+		
+	}
 
-	public Ball()
+	public Ball(int x, int y, int wid, int ht, int xSpd, int ySpd)
 	{
 		super(200,200);
 		xSpeed = 2;
@@ -86,6 +91,12 @@ public class Ball extends Block
 	public int getySpeed()
 	{
 		return ySpeed; 
+	}
+	
+	public void move()
+	{
+		setX(getX() + xSpeed);
+		setY(getY() + ySpeed);
 	}
 	
 	

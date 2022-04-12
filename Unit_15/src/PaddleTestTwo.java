@@ -42,7 +42,7 @@ ball = new Ball();
 
 
 		//set up the Canvas
-		setBackground(Color.black);
+		setBackground(Color.white);
 		setVisible(true);
 
 		this.addKeyListener(this);
