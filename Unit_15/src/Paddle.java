@@ -12,7 +12,7 @@ public class Paddle extends Block
 
    public Paddle()
    {
-		super(10,100);
+		super(10,10);
       speed =2;
    }
 
@@ -64,21 +64,21 @@ public int getSpeed()
 
    public void moveUpAndDraw(Graphics window)
    {
-	   draw(window, Color.black);
+	   draw(window, Color.white);
 	   
 	   setY(getY()-speed);
 	   
-	   draw(window, Color.white);
+	   draw(window);
 
    }
 
    public void moveDownAndDraw(Graphics window)
    {
-	   draw(window, Color.black)
+	   draw(window, Color.white)
 ;
 	   setY(getY()+speed);
 	   
-	   draw (window, Color.white); 
+	   draw (window); 
 
    }
 
