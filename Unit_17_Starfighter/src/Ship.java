@@ -26,7 +26,7 @@ public class Ship extends MovingThing
 
 	public Ship(int x, int y, int s)
 	{
-	   this(x,y,50,50,s);
+	   this(x,y,50,50, s);
 	}
 
 	public Ship(int x, int y, int w, int h, int s)
@@ -85,6 +85,6 @@ public class Ship extends MovingThing
 
 	public String toString()
 	{
-		return super.toString() + getSpeed();
+		return super.toString() +" "+ getSpeed();
 	}
 }
