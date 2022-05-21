@@ -10,11 +10,11 @@ import javax.imageio.ImageIO;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AlienHorde
+public class AlienHorde2
 {
 	private List<Alien> aliens;
 
-	public AlienHorde(int size)
+	public AlienHorde2(int size)
 	{
 		aliens = new ArrayList<>(size);
 	}
@@ -82,6 +82,4 @@ public class AlienHorde
 	{
 		return "";
 	}
-
-	
 }

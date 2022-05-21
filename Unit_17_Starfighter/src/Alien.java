@@ -16,17 +16,26 @@ public class Alien extends MovingThing
 
 	public Alien()
 	{
-		this(0,0,30,30,0);
+		this(10,10,30,30,0);
 	}
 
 	public Alien(int x, int y)
 	{
-		//add code here
+		this(x,y,0);
 	}
 
 	public Alien(int x, int y, int s)
 	{
-		//add code here
+		super(x,y);
+		speed=s;
+		try
+		{
+			image = ImageIO.read(new File("src/StarFighter/alien.jpg"));
+		}
+		catch(Exception e)
+		{
+
+		}
 	}
 
 	public Alien(int x, int y, int w, int h, int s)
@@ -46,18 +55,30 @@ public class Alien extends MovingThing
 
 	public void setSpeed(int s)
 	{
-	   //add code
+	  speed=s;
 	}
 
 	public int getSpeed()
 	{
-	   return 0;
+	   return speed;
 	}
 
    public void move(String direction)
 	{
-	   //add code here
-	}
+	   if (direction.equals("UP")) {
+           super.setY(super.getY() + speed);
+       }
+       if (direction.equals("DOWN")) {
+           super.setY(super.getY() - speed);
+       }
+       if (direction.equals("RIGHT")) {
+           super.setX(getX() + speed);
+       }
+       if (direction.equals("LEFT")) {
+           super.setX(getX() - speed);
+       }
+   }
+	
 
 	public void draw( Graphics window )
 	{

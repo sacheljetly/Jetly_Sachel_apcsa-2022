@@ -87,4 +87,9 @@ public class Ship extends MovingThing
 	{
 		return super.toString() +" "+ getSpeed();
 	}
+
+	public void draw(Object setVisible) {
+		// TODO Auto-generated method stub
+		
+	}
 }
