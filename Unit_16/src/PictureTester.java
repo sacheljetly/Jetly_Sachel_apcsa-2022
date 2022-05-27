@@ -157,10 +157,22 @@ public class PictureTester
   //  testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
-    //testEncodeAndDecode();
+    testEncodeAndDecode();
     //testGetCountRedOverValue(250);
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
   }
+
+private static void testEncodeAndDecode() {
+	Picture beach = new Picture( "src/beach.jpg" );
+    beach.explore();
+    Picture message = new Picture( "src/msg.jpg" );
+    beach.encode( message );
+    beach.explore();
+    Picture decoded = beach.decode();
+    decoded.explore();
+	
+	
+}
 }

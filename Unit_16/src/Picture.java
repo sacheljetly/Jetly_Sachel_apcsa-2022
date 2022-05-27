@@ -85,6 +85,129 @@ public class Picture extends SimplePicture
     
   }
   
+  
+  
+  public boolean isPrime(int num)
+  {
+	  if (num <=1 )
+	  {
+		  return true;
+	  }
+	  
+	  if (num<=3)
+	  {
+		  return true; 
+	  }
+	  
+	  if(num%2==0 || num%3==0)
+	  {
+		  return false; 
+	  }
+	  
+	  for (int i = 5; i*i <= num; i=i+6)
+	  {
+		  if( num%i ==0 || num% (i+1) ==0)
+		  {
+			  return false; 
+		  }
+		  
+	  }
+	  return true; 
+  }
+  
+  
+  // ENCODE DECODE 
+  
+  public void encode(Picture messagePict)
+  {
+  Pixel[][] messagePixels = messagePict.getPixels2D();
+  Pixel[][] currPixels = this.getPixels2D();
+  Pixel currPixel = null;
+  Pixel messagePixel = null;
+  int count = 0;
+  for (int row = 0; row < this.getHeight(); row++)
+  {
+  for (int col = 0; col < this.getWidth(); col++)
+  {
+  // if the current pixel red is odd make it even
+	  
+  currPixel = currPixels[row][col];
+  if (isPrime(currPixel.getBlue()) == true )
+  {
+	 if (currPixel.getBlue() <4)
+	 {
+		 currPixel.setBlue(4);
+	 }
+	 else
+	 {
+		 currPixel.setBlue(currPixel.getBlue() +1);
+	 }
+	  
+  }
+  
+  
+  messagePixel = messagePixels[row][col];
+  
+  if (messagePixel.colorDistance(Color.BLACK) < 50)
+  {
+  
+	  if (currPixel.getBlue()==4)
+	  {
+		  currPixel.setBlue(3);
+		  
+	  }
+	  else { 
+		  
+		  for (int number = currPixel.getBlue(); number>=0;number-- )
+		  {
+			  if (isPrime(number))
+			  {
+				  currPixel.setBlue(number);
+				  break; 
+			  }
+			  
+		  }
+		  
+	  }
+	  
+			  
+			 
+  }}}}
+  /**
+  * Method to decode a message hidden in the
+  * red value of the current picture
+  * @return the picture with the hidden message
+  */
+  public Picture decode()
+  {
+  Pixel[][] pixels = this.getPixels2D();
+  int height = this.getHeight();
+  int width = this.getWidth();
+  Pixel currPixel = null;
+
+  Pixel messagePixel = null;
+  Picture messagePicture = new Picture(height,width);
+  Pixel[][] messagePixels = messagePicture.getPixels2D();
+  int count = 0;
+  for (int row = 0; row < this.getHeight(); row++)
+  {
+  for (int col = 0; col < this.getWidth(); col++)
+  {
+  currPixel = pixels[row][col];
+  messagePixel = messagePixels[row][col];
+  
+  
+  if (isPrime(currPixel.getBlue()) )
+  {
+  messagePixel.setColor(Color.BLACK);
+  
+  }
+  }
+  }
+  
+  return messagePicture;
+  }
+  
   /** Method to set the blue to 0 */
   public void zeroBlue()
   {
