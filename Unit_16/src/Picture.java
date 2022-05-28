@@ -123,6 +123,7 @@ public class Picture extends SimplePicture
   Pixel[][] messagePixels = messagePict.getPixels2D();
   Pixel[][] currPixels = this.getPixels2D();
   Pixel currPixel = null;
+  int countblack =0;
   Pixel messagePixel = null;
   int count = 0;
   for (int row = 0; row < this.getHeight(); row++)
@@ -147,9 +148,11 @@ public class Picture extends SimplePicture
   
   
   messagePixel = messagePixels[row][col];
+ 
   
   if (messagePixel.colorDistance(Color.BLACK) < 50)
   {
+	  countblack++; 
   
 	  if (currPixel.getBlue()==4)
 	  {
@@ -172,7 +175,14 @@ public class Picture extends SimplePicture
 	  
 			  
 			 
-  }}}}
+  }
+  
+ 
+  }
+  }
+  
+  System.out.println(countblack);
+  }
   /**
   * Method to decode a message hidden in the
   * red value of the current picture
@@ -184,7 +194,7 @@ public class Picture extends SimplePicture
   int height = this.getHeight();
   int width = this.getWidth();
   Pixel currPixel = null;
-
+  int countisPrime=0;
   Pixel messagePixel = null;
   Picture messagePicture = new Picture(height,width);
   Pixel[][] messagePixels = messagePicture.getPixels2D();
@@ -201,10 +211,11 @@ public class Picture extends SimplePicture
   {
   messagePixel.setColor(Color.BLACK);
   
+	 countisPrime++; 
   }
   }
   }
-  
+  System.out.println(countisPrime + " isprime");
   return messagePicture;
   }
   
